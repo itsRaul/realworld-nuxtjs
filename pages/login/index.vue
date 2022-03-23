@@ -13,15 +13,15 @@
               <li>That email is already taken</li>
             </ul>
 
-            <form>
+            <form @submit.prevent="onSubmit">
               <fieldset class="form-group" v-if="!isLogin">
                 <input class="form-control form-control-lg" type="text" placeholder="Your Name">
               </fieldset>
               <fieldset class="form-group">
-                <input class="form-control form-control-lg" type="text" placeholder="Email">
+                <input v-model="user.email" class="form-control form-control-lg" type="text" placeholder="Email">
               </fieldset>
               <fieldset class="form-group">
-                 <input class="form-control form-control-lg" type="password" placeholder="Password">
+                 <input v-model="user.password" class="form-control form-control-lg" type="password" placeholder="Password">
               </fieldset>
               <button class="btn btn-lg btn-primary pull-xs-right">
                 {{isLogin ? 'Sign in' : ' Sign up'}}
@@ -36,9 +36,22 @@
 <script>
 export default {
   name: 'LoginIndex',
+  data () {
+    return {
+      user: {
+        email: '',
+        password: ''
+      }
+    }
+  },
   computed:  {
     isLogin () {
       return this.$route.name === 'login'
+    }
+  },
+  methods: {
+    onSubmit () {
+      console.log('this', this.user)
     }
   }
 }
