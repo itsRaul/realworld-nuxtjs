@@ -17,7 +17,7 @@
                 <a class="nav-link disabled" href="">Your Feed</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="">Global Feed</a>
+                <a class="nav-link active" href="">Global Feed1</a>
               </li>
             </ul>
           </div>

@@ -9,7 +9,7 @@
 
 - 打开代码的远程仓库，点击Settings中的Secrets,选择Actions secrets。点击New repository secret，Name为TOKEN,和之前的保持一致，Value则是之前复制创建成功的令牌。
 
-- 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
+- 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
 
 ### 配置GitHub Actions 执行脚本
 
